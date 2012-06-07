@@ -44,9 +44,8 @@ event binding into the `@bindings` `Array` set up by `initialize`. `@cleanUp`
 clears the binding from `@collection`, so the `reset` event will only fire
 once. Hooray!
 
-This example also demonstrates the support for automatic subview cleanup. Just
-add two lines: add `@child_views = []` to `initialize`, and push in the
-subview:
+Even better, you can add automatic subview cleanup by add just two lines. Put
+`@child_views = []` in `initialize`, and push in the subviews you create:
 
     render: ->
       @cleanUp()
@@ -57,8 +56,8 @@ subview:
 
       @
 
-**Important note:** Using `Backbone.UnbindingView` for a view means that all
-its subviews will also need to use `UnbindingView`.
+**Important note:** Using `Backbone.UnbindingView` for a view means that any
+subviews put in `@child_views` must be extended from `UnbindingView`.
 
 ## Contributing
 
