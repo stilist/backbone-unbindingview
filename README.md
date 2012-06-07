@@ -44,8 +44,8 @@ event binding into the `@bindings` `Array` set up by `initialize`. `@cleanUp`
 clears the binding from `@collection`, so the `reset` event will only fire
 once. Hooray!
 
-Even better, you can add automatic subview cleanup by add just two lines. Put
-`@child_views = []` in `initialize`, and push in the subviews you create:
+Even better, you can add automatic subview cleanup by adding just two lines.
+Put `@child_views = []` in `initialize`, and push in the subviews you create:
 
     render: ->
       @cleanUp()
